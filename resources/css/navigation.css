@@ -1,0 +1,237 @@
+/* Navigation Styles */
+.nav-link {
+    @apply flex items-center space-x-2 px-4 py-2 rounded-lg text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300 font-medium;
+}
+
+.nav-link.active {
+    @apply bg-white/20 text-white shadow-lg;
+}
+
+.nav-link svg {
+    @apply transition-transform duration-300;
+}
+
+.nav-link:hover svg {
+    @apply scale-110;
+}
+
+.dropdown-item {
+    @apply flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-all duration-200 font-medium;
+}
+
+.dropdown-item.active {
+    @apply bg-blue-50 text-blue-700;
+}
+
+.dropdown-item svg {
+    @apply transition-transform duration-200;
+}
+
+.dropdown-item:hover svg {
+    @apply scale-110;
+}
+
+/* Responsive Navigation Styles */
+@media (max-width: 1279px) {
+    .nav-link {
+        @apply text-gray-700 hover:text-gray-900 hover:bg-gray-100;
+    }
+    
+    .nav-link.active {
+        @apply bg-blue-100 text-blue-700;
+    }
+}
+
+/* Animation for dropdown menus */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu {
+    animation: slideDown 0.2s ease-out;
+}
+
+/* Logo animation */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+    }
+}
+
+.logo-glow {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Backdrop blur effect for better readability */
+.backdrop-blur-custom {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Mobile menu improvements */
+.mobile-menu-item {
+    @apply flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 rounded-lg mx-2 my-1;
+}
+
+.mobile-menu-item.active {
+    @apply bg-blue-100 text-blue-700;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Custom scrollbar for dropdown menus */
+.dropdown-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 2px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 2px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Focus states for accessibility */
+.nav-link:focus,
+.dropdown-item:focus {
+    @apply outline-none ring-2 ring-white/50 ring-offset-2 ring-offset-transparent;
+}
+
+/* Hover effects for better UX */
+.nav-link:hover {
+    transform: translateY(-1px);
+}
+
+.dropdown-item:hover {
+    transform: translateX(4px);
+}
+
+/* Loading animation for logo */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-loading {
+    animation: rotate 2s linear infinite;
+}
+
+/* Notification badge styles */
+.notification-badge {
+    @apply absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold animate-pulse;
+}
+
+/* Status indicator styles */
+.status-online {
+    @apply bg-green-400 animate-pulse;
+}
+
+.status-busy {
+    @apply bg-yellow-400;
+}
+
+.status-offline {
+    @apply bg-gray-400;
+}
+
+/* Enhanced shadow effects */
+.shadow-glow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+.shadow-glow-purple {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 20px rgba(147, 51, 234, 0.15);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .nav-title {
+        @apply text-base;
+    }
+    
+    .nav-subtitle {
+        @apply text-xs;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-title {
+        @apply text-sm;
+    }
+    
+    .nav-subtitle {
+        @apply text-xs;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .dropdown-item {
+        @apply text-gray-200 hover:bg-gray-700 hover:text-white;
+    }
+    
+    .dropdown-item.active {
+        @apply bg-blue-900 text-blue-200;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav {
+        display: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .nav-link {
+        @apply border border-white/30;
+    }
+    
+    .dropdown-item {
+        @apply border-b border-gray-200;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

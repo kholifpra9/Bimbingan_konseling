@@ -8,7 +8,6 @@ Sistem informasi bimbingan konseling berbasis web yang memungkinkan komunikasi a
 -   💬 **Curhat Rahasia** - Komunikasi pribadi siswa dengan guru BK
 -   📋 **Formulir Cek Masalah** - Siswa mengisi, guru BK mereview
 -   🤝 **Bimbingan Konseling** - Konsultasi umum
--   📅 **Bimbingan Lanjutan** - Tindak lanjut kasus
 -   📱 **Notifikasi WhatsApp** - Otomatis untuk setiap aktivitas penting
 -   📎 **File Upload** - Attachment pada curhat
 -   📊 **Dashboard** - Statistik dan overview

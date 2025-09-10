@@ -107,6 +107,7 @@
                         <option value="Sosial"   {{ old('jenis_bimbingan')==='Sosial'   ? 'selected' : '' }}>Sosial</option>
                         <option value="Akademik" {{ old('jenis_bimbingan')==='Akademik' ? 'selected' : '' }}>Akademik</option>
                         <option value="Pribadi"  {{ old('jenis_bimbingan')==='Pribadi'  ? 'selected' : '' }}>Pribadi</option>
+                        <option value="karir"  {{ old('jenis_bimbingan')==='karir'  ? 'selected' : '' }}>Karir</option>
                     </x-select-input>
                     <x-input-error class="mt-2" :messages="$errors->get('jenis_bimbingan')" />
                     <p class="mt-1 text-xs text-gray-500">Contoh: Akademik untuk masalah nilai/tugas.</p>
